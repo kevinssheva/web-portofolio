@@ -10,11 +10,11 @@ const WhatIDo = () => {
   const { ref } = useSectionInView("About", 0.6);
   return (
     <div
-      className="py-20 w-full flex gap-10 items-center min-h-[80vh]"
+      className="py-20 w-full flex flex-col lg:flex-row gap-10 items-center lg:min-h-[90vh]"
       id="about"
       ref={ref}
     >
-      <div className="w-[40%]">
+      <div className="w-full lg:w-[40%]">
         <div className="flex gap-3 items-center mb-3">
           <h4>What I do</h4>
           <Image
@@ -41,7 +41,7 @@ const WhatIDo = () => {
           and artificial intelligence.
         </p>
       </div>
-      <div className="flex-1 flex gap-5">
+      <div className="lg:flex-1 flex flex-col md:flex-row gap-16 md:gap-5 my-7 md:mt-12 md:my-0">
         <ActivityCard
           icon={FaEarthAmericas}
           title="Web Development"

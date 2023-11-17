@@ -23,7 +23,7 @@ const Navbar = () => {
     }
   };
   return (
-    <div className="fixed left-0 z-50 rounded-r-3xl h-[30rem] top-1/2 -translate-y-1/2 overflow-hidden">
+    <div className="fixed left-0 z-50 rounded-r-3xl h-[30rem] top-1/2 -translate-y-1/2 overflow-hidden hidden lg:block">
       <div className="flex flex-col justify-around px-3 rounded-r-3xl w-full h-full relative glass">
         {links.map((link, index) => (
           <Link

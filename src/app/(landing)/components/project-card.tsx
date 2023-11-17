@@ -23,13 +23,13 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   const isReversed = useMemo(() => index % 2 !== 0, [index]);
   return (
-    <div className="w-full aspect-[220/80] rounded-3xl p-8">
+    <div className="w-full h-auto md:aspect-[220/80] rounded-3xl lg:px-8">
       <div
-        className={`w-full h-full flex gap-10 items-center ${
-          isReversed && "flex-row-reverse"
+        className={`w-full h-full flex flex-col lg:flex-row gap-5 md:gap-10 items-center ${
+          isReversed && "lg:flex-row-reverse"
         }`}
       >
-        <div className="w-[45%] h-full relative rounded-lg overflow-hidden group">
+        <div className="w-full lg:w-[45%] aspect-[16/15] md:aspect-video lg:h-full relative rounded-lg overflow-hidden group">
           {href && (
             <Link
               href={href}
@@ -52,8 +52,10 @@ const ProjectCard = ({
         <div className="flex-1">
           <p className="font-semibold text-primary/80">{type}</p>
           <h3 className="leading-tight">{title}</h3>
-          <p className="glass rounded-[1.25rem] py-5 px-6 mt-2">{description}</p>
-          <div className="flex gap-3 mt-5">
+          <p className="glass rounded-[1.25rem] px-4 py-5 md:px-6 mt-2">
+            {description}
+          </p>
+          <div className="flex gap-3 mt-3 md:mt-5">
             {techStack.map((item, index) => (
               <div
                 key={index}

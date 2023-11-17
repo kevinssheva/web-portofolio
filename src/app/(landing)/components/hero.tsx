@@ -31,12 +31,14 @@ const Hero = () => {
       ref={ref}
       id="Home"
     >
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 animate-bounce text-3xl">
-        <FaArrowDownLong />
+      <div className="absolute w-full bottom-10 flex items-center justify-center text-3xl animate-bounce">
+        <Link href="#about">
+          <FaArrowDownLong />
+        </Link>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 items-center -mb-3 md:mb-0">
         <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-          Hi! Im Kevin Sebastian
+          Hi! <span className="hidden lg:inline">Im Kevin Sebastian</span>
         </h1>
         <Image
           src="/wave.svg"
@@ -44,15 +46,18 @@ const Hero = () => {
           width={60}
           height={60}
           quality={100}
-          className="-scale-x-100 -rotate-[10deg]"
+          className="-scale-x-100 -rotate-[10deg] w-[3rem] md:w-[4rem] aspect-square"
         />
       </div>
+      <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary hidden">
+        Im Kevin Sebastian
+      </h1>
       <h5>
         A special human with some ability to love learning and working on
         teamwork.
       </h5>
-      <div className="flex gap-10 items-start mt-10">
-        <div className="w-40 aspect-square bg-gradient-to-r from-primary to-secondary rounded-full p-1">
+      <div className="gap-10 items-start mt-2 lg:mt-10 flex">
+        <div className="hidden lg:block w-40 aspect-square bg-gradient-to-r from-primary to-secondary rounded-full p-1">
           <div className="w-full h-full bg-[#3A3636] rounded-full relative">
             <Image
               src={"/character.svg"}
@@ -62,8 +67,8 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="w-1/2">
-          <h1 className="font-sora font-bold text-xl mb-3">Biography</h1>
+        <div className="hidden lg:block w-1/2">
+          <h4>Biography</h4>
           <p>
             A student at the{" "}
             <span className="font-semibold text-primary">
@@ -80,14 +85,16 @@ const Hero = () => {
             .
           </p>
         </div>
-        <div className="w-1/4 ml-auto">
-          <h1 className="font-sora font-bold text-xl mb-3">Lets Connect</h1>
+        <div className="w-full lg:w-1/4 ml-auto">
+          <h1 className="font-sora font-bold text-xl mb-3 hidden lg:block">
+            Lets Connect
+          </h1>
           <div className="flex gap-3 text-3xl">
             {socialData.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className={`text-white ${item.gradient} transition hover:scale-110 cursor-alias`}
+                className={`text-white ${item.gradient} transition hover:scale-110 cursor-pointer`}
                 target="_blank"
               >
                 <item.icon />

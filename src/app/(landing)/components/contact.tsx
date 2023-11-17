@@ -8,14 +8,14 @@ import Image from "next/image";
 import { useSectionInView } from "@/lib/hooks";
 
 const Contact = () => {
-  const { ref } = useSectionInView("Contact", 0.75);
+  const { ref } = useSectionInView("Contact", 0.65);
   return (
     <div
-      className="w-full py-20 flex gap-8 items-center min-h-[80vh]"
+      className="w-full py-20 flex flex-col lg:flex-row gap-8 lg:gap-20 items-center lg:min-h-[80vh]"
       id="contact"
       ref={ref}
     >
-      <div className="flex-1 mr-20">
+      <div className="flex-1">
         <div className="flex items-center gap-3">
           <h4 className="mt-2">Dont be shy! Hit me Up!</h4>
           <Image
@@ -23,6 +23,7 @@ const Contact = () => {
             alt="pointing-right"
             width={50}
             height={50}
+            className="hidden lg:block"
           />
         </div>
         <p className="text-white/80 mt-3">
@@ -31,7 +32,7 @@ const Contact = () => {
           my best to get back to you!
         </p>
       </div>
-      <div className="flex flex-col gap-4 flex-1">
+      <div className="flex flex-col gap-4 lg:w-1/3 w-full">
         <div className="flex-1 flex items-center gap-3">
           <div className="w-16 aspect-square rounded-full glass text-2xl flex justify-center items-center">
             <FaMapLocationDot />

@@ -36,20 +36,22 @@ const projectData = [
 const Project = () => {
   const { ref } = useSectionInView("Projects", 0.25);
   return (
-    <div className="w-full py-20" id="projects" ref={ref}>
+    <div className="w-full py-10 md:py-20" id="projects" ref={ref}>
       <h3>Featured Project</h3>
-      {projectData.map((item, index) => (
-        <ProjectCard
-          key={index}
-          imageUrl={item.imageUrl}
-          type={item.type}
-          title={item.title}
-          description={item.description}
-          techStack={item.techStack}
-          index={index}
-          href={item.href}
-        />
-      ))}
+      <div className="flex flex-col gap-10 lg:gap-16 mt-4 md:mt-8">
+        {projectData.map((item, index) => (
+          <ProjectCard
+            key={index}
+            imageUrl={item.imageUrl}
+            type={item.type}
+            title={item.title}
+            description={item.description}
+            techStack={item.techStack}
+            index={index}
+            href={item.href}
+          />
+        ))}
+      </div>
     </div>
   );
 };
