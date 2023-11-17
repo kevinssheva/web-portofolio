@@ -34,9 +34,19 @@ const Hero = () => {
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2 animate-bounce text-3xl">
         <FaArrowDownLong />
       </div>
-      <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-        Hi! Im Kevin Sebastian
-      </h1>
+      <div className="flex gap-4">
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+          Hi! Im Kevin Sebastian
+        </h1>
+        <Image
+          src="/wave.svg"
+          alt="wave"
+          width={60}
+          height={60}
+          quality={100}
+          className="-scale-x-100 -rotate-[10deg]"
+        />
+      </div>
       <h5>
         A special human with some ability to love learning and working on
         teamwork.
@@ -52,14 +62,25 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="w-1/3">
+        <div className="w-1/2">
           <h1 className="font-sora font-bold text-xl mb-3">Biography</h1>
           <p>
-            Getting Buff +1 for learning, Buff +2 for documentation and more
-            buff on managing team. Exicited on React, UX Research and Agile.
+            A student at the{" "}
+            <span className="font-semibold text-primary">
+              Bandung Institute of Technology
+            </span>{" "}
+            pursuing a degree in{" "}
+            <span className="text-secondary font-semibold">
+              Information Systems and Technology
+            </span>
+            . I&apos;m deeply passionate about exploring the realm of{" "}
+            <span className="font-bold underline-offset-2 underline">
+              software engineering
+            </span>
+            .
           </p>
         </div>
-        <div className="w-1/3 ml-auto">
+        <div className="w-1/4 ml-auto">
           <h1 className="font-sora font-bold text-xl mb-3">Lets Connect</h1>
           <div className="flex gap-3 text-3xl">
             {socialData.map((item, index) => (

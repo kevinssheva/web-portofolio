@@ -9,16 +9,16 @@ const projectData = [
     type: "Web Development",
     title: "Bersama Ashwa",
     description:
-      "Serrow restructured and designed core pages, creating interactive elements that put users in control and allowed them to discover the information needed to make a decision.",
+      "A comprehensive online platform designed to facilitate mental health check-ups through interactive quizzes and personalized consultations.",
     techStack: ["React", "CSS", "Express"],
     href: "https://www.bersamaashwa.com/",
   },
   {
     imageUrl: "/project/helppals.png",
     type: "Web Development",
-    title: "Serrow",
+    title: "HelpPals",
     description:
-      "Serrow restructured and designed core pages, creating interactive elements that put users in control and allowed them to discover the information needed to make a decision.",
+      "A website platform allowing users to assess their mental health through scheduled quizzes, record daily emotions, and incorporate a diary feature for the ongoing monitoring of daily mental well-being.",
     techStack: ["NextJS", "Tailwind"],
     href: "https://www.helppalstherapy.com/",
   },
@@ -27,7 +27,7 @@ const projectData = [
     type: "Web Development",
     title: "Sparta",
     description:
-      "Serrow restructured and designed core pages, creating interactive elements that put users in control and allowed them to discover the information needed to make a decision.",
+      "An online platform for the orientation activities of a student organization's new member recruitment, offering features such as assignment and material details, as well as a daily journal feature.",
     techStack: ["NextJS", "CSS"],
     href: "https://www.sparta22hmif.com/",
   },

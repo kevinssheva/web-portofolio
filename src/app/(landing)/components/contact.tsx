@@ -38,9 +38,9 @@ const Contact = () => {
           </div>
           <div>
             <h6>Location</h6>
-            <p className="text-white/80 hover:text-primary transition cursor-default">
+            <span className="text-white/80 hover:text-primary transition cursor-default text-base">
               Bandung, Indonesia
-            </p>
+            </span>
           </div>
         </div>
         <div className="flex-1 flex items-center gap-3">
