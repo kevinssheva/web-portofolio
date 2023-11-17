@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaArrowDownLong } from "react-icons/fa6";
+import { IoMdPaper } from "react-icons/io";
 
 const socialData = [
   {
@@ -25,6 +26,12 @@ const socialData = [
 ];
 const Hero = () => {
   const { ref } = useSectionInView("Home", 0.3);
+  const handleDownload = () => {
+    const downloadUrl =
+      "https://drive.google.com/file/d/1VpemnBaoEU1_bH88pnrXN017JobBJxFe/view?usp=drive_link"; // Update the path to your file
+    window.open(downloadUrl, "_blank");
+  };
+
   return (
     <div
       className="w-full min-h-screen py-20 flex flex-col gap-3 justify-center relative"
@@ -49,7 +56,7 @@ const Hero = () => {
           className="-scale-x-100 -rotate-[10deg] w-[3rem] md:w-[4rem] aspect-square"
         />
       </div>
-      <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary hidden">
+      <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary lg:hidden">
         Im Kevin Sebastian
       </h1>
       <h5>
@@ -84,6 +91,13 @@ const Hero = () => {
             </span>
             .
           </p>
+          <button
+            onClick={handleDownload}
+            className="py-3 px-4 bg-white rounded-lg text-black font-semibold mt-4 flex gap-3 items-center"
+          >
+            <IoMdPaper />
+            <span>See Resume</span>
+          </button>
         </div>
         <div className="w-full lg:w-1/4 ml-auto">
           <h1 className="font-sora font-bold text-xl mb-3 hidden lg:block">
@@ -101,6 +115,13 @@ const Hero = () => {
               </Link>
             ))}
           </div>
+          <button
+            onClick={handleDownload}
+            className="py-2 text-sm px-3 bg-white rounded-lg text-black font-semibold mt-4 flex gap-3 items-center"
+          >
+            <IoMdPaper />
+            <span>See Resume</span>
+          </button>
         </div>
       </div>
     </div>
