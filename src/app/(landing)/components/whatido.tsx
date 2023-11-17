@@ -1,10 +1,18 @@
+"use client";
+
+import { useSectionInView } from "@/lib/hooks";
 import ActivityCard from "./activity-card";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { MdHive } from "react-icons/md";
 
 const WhatIDo = () => {
+  const { ref } = useSectionInView("About", 0.2);
   return (
-    <div className="py-20 w-full flex gap-10 items-center">
+    <div
+      className="py-20 w-full flex gap-10 items-center min-h-[80vh]"
+      id="about"
+      ref={ref}
+    >
       <div className="w-[40%]">
         <h4 className="mb-3">What I do</h4>
         <p>

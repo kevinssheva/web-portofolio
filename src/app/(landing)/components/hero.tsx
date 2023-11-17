@@ -1,3 +1,6 @@
+"use client";
+
+import { useSectionInView } from "@/lib/hooks";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -21,8 +24,13 @@ const socialData = [
   },
 ];
 const Hero = () => {
+  const { ref } = useSectionInView("Home", 0.3);
   return (
-    <div className="w-full min-h-screen py-20 flex flex-col gap-3 justify-center relative">
+    <div
+      className="w-full min-h-screen py-20 flex flex-col gap-3 justify-center relative"
+      ref={ref}
+      id="Home"
+    >
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2 animate-bounce text-3xl">
         <FaArrowDownLong />
       </div>

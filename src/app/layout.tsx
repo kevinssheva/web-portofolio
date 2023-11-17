@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import ActiveSectionContextProvider from "@/context/active-section-context";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,10 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body className={`${inter.className} ${inter.variable} ${sora.variable}`}>
-        <Navbar />
-        <div className="container mx-auto px-[5%]">{children}</div>
+        <ActiveSectionContextProvider>
+          <Navbar />
+          <div className="container mx-auto px-[5%]">{children}</div>
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

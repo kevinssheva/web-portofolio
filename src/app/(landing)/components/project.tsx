@@ -1,4 +1,7 @@
+"use client";
+
 import ProjectCard from "./project-card";
+import { useSectionInView } from "@/lib/hooks";
 
 const projectData = [
   {
@@ -31,8 +34,9 @@ const projectData = [
 ];
 
 const Project = () => {
+  const { ref } = useSectionInView("Projects", 0.25);
   return (
-    <div className="w-full py-20">
+    <div className="w-full py-20" id="projects" ref={ref}>
       <h3>Featured Project</h3>
       {projectData.map((item, index) => (
         <ProjectCard

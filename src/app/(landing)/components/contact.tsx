@@ -1,12 +1,20 @@
+"use client";
+
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { useSectionInView } from "@/lib/hooks";
 
 const Contact = () => {
+  const { ref } = useSectionInView("Contact", 0.75);
   return (
-    <div className="w-full py-20 flex gap-8 items-center">
+    <div
+      className="w-full py-20 flex gap-8 items-center min-h-[80vh]"
+      id="contact"
+      ref={ref}
+    >
       <div className="flex-1 mr-20">
         <div className="flex items-center gap-3">
           <h4 className="mt-2">Dont be shy! Hit me Up!</h4>
