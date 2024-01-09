@@ -117,7 +117,7 @@ const Hero = () => {
           </div>
           <button
             onClick={handleDownload}
-            className="py-2 text-sm px-3 bg-white rounded-lg text-black font-semibold mt-4 flex gap-3 items-center"
+            className="py-2 text-sm px-3 bg-white rounded-lg text-black font-semibold mt-4 flex lg:hidden gap-3 items-center"
           >
             <IoMdPaper />
             <span>See Resume</span>
