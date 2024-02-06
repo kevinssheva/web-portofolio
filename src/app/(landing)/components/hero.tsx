@@ -28,7 +28,7 @@ const Hero = () => {
   const { ref } = useSectionInView("Home", 0.3);
   const handleDownload = () => {
     const downloadUrl =
-      "https://drive.google.com/file/d/1VpemnBaoEU1_bH88pnrXN017JobBJxFe/view?usp=drive_link"; // Update the path to your file
+      "https://drive.google.com/file/d/1qlhVl7aCrEDPMavczK4yLAnu0KmZUxhx/view?usp=sharing"; // Update the path to your file
     window.open(downloadUrl, "_blank");
   };
 
