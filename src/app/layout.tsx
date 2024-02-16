@@ -16,7 +16,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Kevin Sebastian",
+  title: "Kevin Sebastian | Website",
   description:
     "A passionate and detail-oriented software engineering enthusiast.",
 };
