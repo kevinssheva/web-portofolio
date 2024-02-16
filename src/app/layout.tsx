@@ -32,7 +32,9 @@ export default function RootLayout({
       <body className={`${inter.className} ${inter.variable} ${sora.variable}`}>
         <ActiveSectionContextProvider>
           <Navbar />
-          <div className="container mx-auto px-[5%]">{children}</div>
+          <div className="w-full max-w-[80rem] px-[5%] lg:px-[10%] xl:px-[5%]gi mx-auto">
+            {children}
+          </div>
         </ActiveSectionContextProvider>
       </body>
     </html>
